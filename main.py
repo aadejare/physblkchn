@@ -42,7 +42,9 @@ def homepage():
     # Return a Jinja2 HTML template and pass in image_entities as a parameter.
     return render_template('homepage.html', image_entities=image_entities)
 
-
+@app.route('/test')
+def test_here():
+    return render_template('hi.html')
 @app.route('/upload_photo', methods=['GET', 'POST'])
 def upload_photo():
     photo = request.files['file']
